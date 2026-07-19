@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <table border="1">
+      <tr><th>Title</th><th>Body</th> <th>content</th> <th>content2</th><th>content3</th> </tr>
+      <tr><td>My first note</td><td>This is the body of my first note</td><td>This is the content of my first note</td><td>This is the content2 of my first note</td><td>This is the content3 of my first note</td></tr>
+      <tr><td>My second note</td><td>This is the body of my second note</td><td>This is the content of my second note</td><td>This is the content2 of my second note</td><td>This is the content3 of my second note</td></tr>
+      <tr><td>My third note</td><td>This is the body of my third note</td><td>This is the content of my third note</td><td>This is the content2 of my third note</td><td>This is the content3 of my third note</td></tr>
+      <tr><td>My fourth note</td><td>This is the body of my fourth note</td><td>This is the content of my fourth note</td><td>This is the content2 of my fourth note</td><td>This is the content3 of my fourth note</td></tr>
+   </table>
+   <script>
+      const rows = document.querySelectorAll('tr');
+      for (let i = 1; i < rows.length; i++) {
+         const cell = rows[i].children[i - 1];
+         if (cell) {
+            cell.style.backgroundColor = 'yellow';
+         }
+      }
+   </script>
+ </body>
+ </html>
