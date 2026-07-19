@@ -1,5 +1,4 @@
 const express = require("express");
-const cors = require("cors");
 let notes = [
   {
     id: "1",
@@ -20,9 +19,6 @@ let notes = [
 
 const app = express();
 app.use(express.json());
-app.use(cors({
-  origin: "http://localhost:5173"
-}));
 app.use(express.static("dist"));
 app.get("/", (request, response) => {
     response.send("<h1>Notes</h1><ul><li>HTML is easy</li><li>Browser can execute only JavaScript</li><li>GET and POST are the most important methods of HTTP protocol</li></ul>")});
